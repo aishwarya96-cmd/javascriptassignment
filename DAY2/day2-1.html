@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to maximum number</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var arr = [45,67,7,34,98,54,77,8,47,9];
+ 
+
+function myFunction() {
+  var b=arr.sort(function(a, b){return a - b});
+  document.write(b[9]);
+}
+</script>
+
+</body>
+</html>

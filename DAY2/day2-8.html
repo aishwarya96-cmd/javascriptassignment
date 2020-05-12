@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p> sort an array in descending order.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var days = ["sunday", "monday", "tuesday", "wednesday"];
+document.getElementById("demo").innerHTML = days;
+
+function myFunction() {
+  
+  days.sort();
+
+  days.reverse();
+  document.getElementById("demo").innerHTML = days;
+}
+</script>
+
+</body>
+</html>

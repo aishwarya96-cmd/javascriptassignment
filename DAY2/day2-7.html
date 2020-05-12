@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to sort the array in ascending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var arr = [45,67,7,34,98,54,77,8,47,9];
+ 
+
+function myFunction() {
+  arr.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = arr;
+}
+</script>
+
+</body>
+</html>
