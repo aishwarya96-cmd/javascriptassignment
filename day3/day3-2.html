@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+   
+		
+    <input type="number" id="no" /><br><br>
+   
+    <input type="button" id="button2" value=" Click to Add amount" onclick="totalbalance(no.value);"></input><br><br>
+   <input type="button" id="button1" value="click to display details" onclick="details();"></input><br><br>
+    <br><br>
+
+<script>
+class Account {
+  constructor(name,balance) {
+    this.name= name;
+	this.balance=balance;
+  }
+ 
+ deposit(amt) {
+   
+	      this.balance=this.balance+parseInt(amt);
+	
+  }
+  
+  show()
+  {
+  return this.name+" "+this.balance;
+  }
+}
+ total = new Account("aish",2000);
+function totalbalance(amt){
+   
+ total.deposit(amt);
+}
+function details(amt){
+   
+document.getElementById("demo").innerHTML = total.show();
+}
+
+</script>
+<p id="demo"></p>
+
+
+</body>
+</html>
