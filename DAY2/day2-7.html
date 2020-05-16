@@ -4,19 +4,26 @@
 
 <p>Click the button to sort the array in ascending order.</p>
 
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
+<input type="text" id="t"></input>
+<button type="button" onclick="arr()">click to add</button>
+<br><br>
+<button type="button" onclick="disp()">click to display</button>
 <script>
-var arr = [45,67,7,34,98,54,77,8,47,9];
- 
-
-function myFunction() {
-  arr.sort(function(a, b){return a - b});
-  document.getElementById("demo").innerHTML = arr;
+var a=0;
+var array=[];
+function arr(){
+array[a++]= document.getElementById("t").value
+}
+function disp(){
+document.getElementById("demo").innerHTML=array;
+array.sort(function(a,b){return a-b})
+document.getElementById("result").innerHTML=array;
 }
 </script>
+<p id="demo"></p>
+<p id="result"></p>
+
+
 
 </body>
 </html>
