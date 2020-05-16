@@ -1,32 +1,23 @@
-
-
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <body>
-
-<p> check mobile number .</p>
-
-<button type="button" onclick="mymobileno(mob)">click</button>
-
-
- 
-
+<input type="number" id="t"></input>
+<button type="button" onclick="check(t.value)">check mobile no</button>
+<p id="result"></p>
 <script>
-var mob = "1123456789";
-function mymobileno(mob) {
 
-if(mob.length==10)
+function check(e)
 {
-  document.write("valid")
+
+if (e.length==10)
+{
+document.getElementById("result").innerHTML="valid";
 }
 else
 {
-document.write("invalid")
+alert("invalid mobile no")
 }
 }
-
 </script>
-
 </body>
 </html>
