@@ -1,19 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <body>
+<p id="demo"></p>
+<input type="text" id="t1"></input>
+<input type="text" id="t2"></input>
+<button type="button" onclick="(t2.value=t1.value)">click to copy data"</button>
 
-<script type="text/javascript">
-    function copy()
-    {
-        var n1 = document.getElementById("n1");
-        var n2 = document.getElementById("n2");
-        n2.value = n1.value;
-    }
-    </script>
-    
-    <label>txbox1</label><input type="text" name="n1" id="n1">
-    <label>txtbox2</label><input type="text" name="n2" id="n2"/>
-    <input type="button" value="copy" onClick="copy();" />
-	</body>
-    </html>
+</body>
+</html>
     
