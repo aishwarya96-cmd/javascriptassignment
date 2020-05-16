@@ -1,22 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <body>
-
-<p> check  and return true if @ is there in email id.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-
+<input type="text" id="t"></input>
+<button type="button" onclick="check(t.value)">check email id</button>
+<p id="result"></p>
 <script>
-function myFunction() {
-  var str = "aishwaryasonawane@gmail.com";
-  var a = str.includes("@");
-  document.getElementById("demo").innerHTML = a;
+
+function check(e)
+{
+
+if (e.includes("@")==true)
+{
+document.getElementById("result").innerHTML="valid email id";
+}
+else
+{
+alert("invalid email id")
+}
 }
 </script>
-
-
 </body>
 </html>
