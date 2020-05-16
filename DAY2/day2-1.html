@@ -1,22 +1,29 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <body>
-
-<p>Click the button to maximum number</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-var arr = [45,67,7,34,98,54,77,8,47,9];
+<input type="text" id="t"></input>
+<button type="button" onclick="arr()">click to add</button>
+<br><br>
+<button type="button" onclick="disp()">click to display</button>
  
+<script>
+var a=0;
+var array=[];
+function arr(){
+array[a++]= document.getElementById("t").value
+}
+function disp(){
 
-function myFunction() {
-  var b=arr.sort(function(a, b){return a - b});
-  document.write(b[9]);
+document.getElementById("demo").innerHTML=array;
+array.sort(function(a,b){return a-b})
+document.getElementById("result").innerHTML=Math.max.apply(null, array);
+
 }
 </script>
+ <p id="demo"></p>
+<p id="result"></p>
+
+
 
 </body>
 </html>
