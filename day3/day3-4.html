@@ -3,8 +3,11 @@
 <body>
 <input type ="text" id ="t"></input>
 <button type="button" onclick="amount1(t.value)"> click to add amount1</button>
+<button type="button" onclick="amount2(t.value)"> click to add amount2</button>
 <button type="button" onclick="w1(t.value)"> click to add withdraw1</button>
+<button type="button" onclick="w2(t.value)"> click to add withdraw2</button>
 <button type="button" onclick="show1()">click to display details1</button>
+<button type="button" onclick="show2()">click to display details2</button>
 <script>
 class Account {
    constructor(name,balance)
@@ -17,21 +20,19 @@ class Account {
    {
   this.balance= this.balance+parseInt(amt);
    }
-   }
     
-  
-   class currentaccount extends Account{
+  }
+  class currentaccount extends Account{
   constructor(name,balance)
   {
     super(name,balance)
-	
+	this.name=name;
+   this.balance=balance;
 	}
-	
 	withdraw(cut)
 	{
-	this.balance= this.balance - cut;
+	this.balance= this.balance -cut;
 	}
-	
 	
 	display()
 	{
@@ -39,21 +40,36 @@ class Account {
 	}
 	}
     var a= new currentaccount("aish",2000)
-	
-	function amount1(amt)
+	var  b= new currentaccount ("shweta",1000)
+   function amount1(amt)
    {
       a.deposit(amt);
 	 }
-	 function w1(amt)
+	 
+   function w1(amt)
    {
    a.withdraw(amt);
+   }
+    function amount2(amt)
+   {
+    b.deposit(amt);
+	}
+	 function w2(amt)
+   {
+   b.withdraw(amt);
    }
    function show1(amt)
    {
     document.getElementById("demo").innerHTML= a.display()
 	}
+	 function show2(amt)
+	 {
 	
-	</script>
-	<p id="demo"></p>
-	</body>
+	    document.getElementById("demo1").innerHTML= b.display()
+    }
+    </script>  
+<p id="demo"></p>
+<p id="demo1"></p>
+
+</body>
 </html> 
