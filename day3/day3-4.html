@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type ="text" id ="t"></input>
+<button type="button" onclick="amount1(t.value)"> click to add amount1</button>
+<button type="button" onclick="w1(t.value)"> click to add withdraw1</button>
+<button type="button" onclick="show1()">click to display details1</button>
+<script>
+class Account {
+   constructor(name,balance)
+   {
+   this.name=name;
+   this.balance=balance;
+   }
+   
+   deposit(amt)
+   {
+  this.balance= this.balance+parseInt(amt);
+   }
+   }
+    
+  
+   class currentaccount extends Account{
+  constructor(name,balance)
+  {
+    super(name,balance)
+	
+	}
+	
+	withdraw(cut)
+	{
+	this.balance= this.balance - cut;
+	}
+	
+	
+	display()
+	{
+	return this.name + this.balance
+	}
+	}
+    var a= new currentaccount("aish",2000)
+	
+	function amount1(amt)
+   {
+      a.deposit(amt);
+	 }
+	 function w1(amt)
+   {
+   a.withdraw(amt);
+   }
+   function show1(amt)
+   {
+    document.getElementById("demo").innerHTML= a.display()
+	}
+	
+	</script>
+	<p id="demo"></p>
+	</body>
+</html> 
