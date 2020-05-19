@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="section">
+<form name="myForm" action="validform.html" onsubmit="return validateForm()" method="post">
+ <label><h1> Registration Form</h1></label>
+ 
+  User id:<input type="text" id="fname" name="fname"  required ><br><br><br>
+ 
+password: <input type="password" id="password" name="password" required ><br><br><br>
+ 
+  Mobileno:<input type="text" id="mobno" name="mobno"  maxlength="10" required><br><br>
+
+  Age:<input type="number" id="age" name="age" min="18" max="100" required><br><br>
+ <input type="submit" value="Submit">
+
+</form>
+ </div>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+function validateForm() {
+let a= document.getElementById("fname").value;
+  let  a1=a.length;
+  let p=document.getElementById("password").value;
+  let m=document.getElementById("mobno").value;
+  let d = document.getElementById("age").value;
+if ( a1 <3 || a1> 15) {
+  alert("Enter the user-id between 3 to 15 characters");
+  return false;
+  
+  } 
+  else if( p.length<8)
+  {
+   
+  alert("enter password of greater than 8 characters");
+ return false;
+ 
+  }
+  else if(isNaN(m)|| m.length!=10)
+  {
+  alert(" invalid mobile number")
+  return false;
+ 
+   }
+  else if (!d.checkValidity()) {
+    document.getElementById("demo").innerHTML = d.validationMessage;
+}else{
+return true;
+}
+
+}
+</script>
+</body>
+</html>
