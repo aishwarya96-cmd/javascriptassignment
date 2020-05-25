@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<label>Enter name</label>
+<input type ="txt" id="name"><br>
+<label>Enter Roll no </label>
+<input type= "txt" id="rollno"><br>
+<label>Enter marks1 </label>
+<input type="txt" id="m1"><br>
+<label>Enter marks2 </label>
+<input type="txt" id="m2"><br>
+<label>Enter marks3 </label>
+<input type="txt" id="m3"><br>
+
+
+<button type="button" onclick= "show()" >click to display total and percentage</button>
+<p id="demo"></p>
+<script>
+class Student {
+  set Name(a)
+  {
+    this._name= a;
+	}
+	set rollno(b)
+	{
+	this._rollno=b;
+	}
+	set marks1(c)
+	{
+	this._marks1= c
+	}
+	set marks2(d)
+	{
+	this._marks2=d;
+	}
+	set marks3(e)
+	{
+	this._marks3= e;
+  }
+  get Name()
+  {
+  return this._name
+  }
+  get rollno()
+  {
+  return this._rollno
+  }
+
+ get total()
+  {
+return  this._marks1+this._marks2+this._marks3;
+  }
+  get percentage()
+  {
+return  ((this._marks1+this._marks2+this._marks3)/300)*100;
+  }
+  
+}
+function show()
+  {
+  mystudent = new Student()
+mystudent.Name= document.getElementById("name").value
+mystudent.rollno= parseInt(document.getElementById("rollno").value)
+mystudent.marks1=parseInt(document.getElementById("m1").value)
+mystudent.marks2=parseInt(document.getElementById("m2").value)
+mystudent.marks3=parseInt(document.getElementById("m3").value)
+
+  document.getElementById("demo").innerHTML =  "Student name:- " + mystudent.Name+ "  " + "roll no:-"+ "  "+ mystudent.rollno +" " + "total score is :-" + mystudent.total+" "+ "overall percentage is:-" + mystudent.percentage
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo" > </p>
+<p id="demo1" > </p>
+<script>
+class employee{
+set memberid(a)
+{
+this._memberid=a
+}
+set name(b)
+{
+this._name=b
+}
+set salary(c)
+{
+this._salary=c
+}
+get memberid()
+{
+return this._memberid
+}
+get name()
+{
+return this._name
+}
+get salary()
+{
+return this._salary
+}
+  get netsalary()
+  {
+  return this._salary -10 * this._salary/100;
+  }
+  }
+ myemp= new employee()
+ myemp1=new employee()
+ myemp.memberid= 1;
+ myemp.name="aish";
+ myemp.salary=2000
+ myemp1.memberid= 2;
+ myemp1.name="shweta";
+ myemp1.salary=3000;
+ document.getElementById("demo").innerHTML = "emp id:-" + myemp.memberid+" "+"emp name :- " +myemp.name+" " +"salary:-" + myemp.salary +" "+ "net salary :-" +myemp.netsalary;
+ document.getElementById("demo1").innerHTML = "emp id:-" +myemp1.memberid+" "+"emp name :- "+ myemp1.name+" " +"salary:-"+ myemp1.salary+ " "+ "net salary :-" +myemp1.netsalary;
+ </script>
+ </body>
+ </html>
+ 
+  
+
+
