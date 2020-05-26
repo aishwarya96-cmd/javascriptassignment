@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<label>Enter the number</label><br>
+<input type="txt" id="no">
+<button type="button" onclick=" disp()">click to get square of number</button>
+<p id="demo"></p>
+<script>
+function disp()
+{
+var x= parseInt(document.getElementById("no").value)
+{
+(function (y) {
+ 
+  document.getElementById("demo").innerHTML = "The square of" +y +" is" + y*y;
+})(x);
+}
+}
+</script>
+
+</body>
+</html>

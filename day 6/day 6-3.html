@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Sum of all arguments:</p>
+
+<input type="number" id="no1"/>
+<input type="number" id="no2"/>
+<input type="number" id="no3"/>
+
+<button type="button" onclick="sumAll(no1.value,no2.value,no3.value)"> click</button>
+
+<p id="demo"></p>
+<script>
+
+function sumAll(no1=0,no2=0,no3=0) {
+var x=Number(no1);
+var y=Number(no2);
+var z=Number(no3);
+  var sum= x+y+z;
+document.getElementById("demo").innerHTML= sum;
+}
+
+
+</script>
+
+</body>
+</html>
