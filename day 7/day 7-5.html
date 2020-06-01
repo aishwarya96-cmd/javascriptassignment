@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo" >Aishwarya</p>
+
+
+
+<label>Choose a font:</label>
+  <select id="fnt" name="font" onchange= "changefont()" size="1">
+    <option value="1px">1</option>
+    <option value="2px">2</option>
+    <option value="3px">3</option>
+    <option value="4px"> 4</option>
+     <option value="5px">5</option> 
+	  <option value="6px">6</option> 
+	   <option value="7px">7</option> 
+	    <option value="8px">8</option> 
+		 <option value="9px">9</option> 
+		  <option value="10px">10</option> 
+	 </select><br><br>
+	 
+	 
+	 
+	 <script>
+	 function changefont()
+	 {
+	 let f=document.getElementById("fnt").value
+	 document.getElementById("demo").style.fontSize= f;
+	 }
+	 
+	 </script>
+	 </body>
+	 </html>
+	 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+Name:<input type="text" id="name"/><br>
+<label>choose the colour</label><br><br>
+  Blue: <input type="radio" id="blue" name="colour" value="blue"/><br>
+ Red:  <input type="radio" id="red" name="colour" value="red"/><br>
+   Green :<input type="radio" id="green" name="colour" value="green"/><br>
+ 
+<script>
+document.getElementById("blue").addEventListener("click",blue);
+document.getElementById("red").addEventListener("click",red);
+document.getElementById("green").addEventListener("click",green);
+function blue()
+{
+ document.getElementById("name").style.color="blue"
+ }
+ function red()
+{
+ document.getElementById("name").style.color="red"
+ }
+ function green()
+{
+ document.getElementById("name").style.color="green"
+ }
+
+</script>
+
+</body>
+</html>

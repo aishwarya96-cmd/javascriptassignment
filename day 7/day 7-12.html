@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<form >
+  <input type="checkbox"  name="b1" value="200">
+  <label> Hisory book :200/-</label><br>
+  <input type="checkbox" name="b1" value="250">
+  <label> English book :250/-</label><br>
+  <input type="checkbox"  name="b1" value="100">
+  <label> Story book : 100/-</label><br><br>
+   <button type="button" onclick = "Total()">submit</button>
+</form>
+<p id ="demo"></p>
+<script>
+function Total()
+{
+var a=document.getElementsByName("b1");
+
+var total=0
+
+for(let i = 0; i < a.length; i++) { 
+                if(a[i].checked) 
+				{
+                total= (total)+ parseInt(a[i].value) 
+				
+            } 
+			document.getElementById("demo").innerHTML=total
+			}
+		}
+		
+</script>
+
+
+</body>
+</html>

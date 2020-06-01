@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<label>enter number 1:</label><br>
+  <input type="number" id="no1" > <br><br>
+  <label>enter number 2:</label><br>
+  <input type="number" id="no2" > <br><br>
+  <label>Result:</label><br>
+  <input type="number" id="result" > <br><br>
+
+ add: <input type="radio" id="add" name="cal" value="add" onclick ="add()"><br>
+ subtract:  <input type="radio" id="sub" name="cal" value="sub" onclick ="sub()"/><br>
+ 
+ 
+ <p id ="demo"></p>
+ <script>
+ 
+
+function add ()
+{
+ let a= Number(document.getElementById("no1").value)
+ let b= Number(document.getElementById("no2").value)
+document.getElementById("result").value = (a+b);
+ }
+ function sub()
+{
+let a= Number(document.getElementById("no1").value)
+ let b= Number(document.getElementById("no2").value)
+ document.getElementById("result").value = (a - b);
+ }
+</script>
+ </body>
+ </html>
