@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(":radio").click(function(){
+  var x= $("input[name='colour']:checked").val();
+    $("textarea").css('color', x);
+});
+});
+</script>
+</head>
+<body>
+
+
+  <h3>Select the colour in which you want to write text</h3>
+  red:<input type="radio" name="colour" value="red"><br>
+  blue<input type="radio" name="colour" value="blue"><br>
+  green:<input type="radio" name="colour" value="green"><br>
+  pink<input type="radio" name="colour" value="pink"><br>
+  yellow:<input type="radio" name="colour" value="yellow"><br>
+  
+  textarea: <textarea col="20" row="5"></textarea>
+
+

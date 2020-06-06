@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(":radio").click(function(){
+  var x= $("input[name='fruits']:checked").val();
+    $("ol").append(x);
+});
+});
+</script>
+</head>
+<body>
+
+
+  <h3>Select the fruit which you want to add in the list</h3>
+  Mango<input type="radio" name="fruits" value="<li> Mango</li>"><br>
+ Apple<input type="radio" name="fruits" value="<li> Apple</li>"><br>
+  Cherry:<input type="radio" name="fruits" value="<li>Cherry</li>"><br>
+ Pineapple<input type="radio" name="fruits" value="<li>Pineapple</li>"><br>
+ 
+ <ol>
+ <li>Strawberry</li>
+<li>Watermelon</li>
+<li>Jackfruit</li>
+</ol>
+</body>
+</html>
